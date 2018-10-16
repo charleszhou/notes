@@ -108,24 +108,24 @@
 
 
 
-  <meta name="description" content="algolia docsearch支持全文搜索，不过没有中文资料所以暂时放弃。 需要安装的插件  hexo-algolia hexo-browsersync hexo-deployer-git  转交给next基金会后的最新地址github algolia设置 把主题的配置文件放到站点的配置文件里方便管理 作者自己写的文档wiki http://theme-next.iissnan.com/ he">
+  <meta name="description" content="表单的内容表单提交的属性 action–规定当提交表单时向何处发送表单数据，action为空（默认）向当前页面发送。 method–规定如何发送表单数据，有get和post两种方法。  表单的提交方式： ajax 浏览器表单提交（会重新加载页面）   表单提交后用303重定向响应浏览器重定向到哪里？ 专用的成功/失败页面 原位置 新位置   表单验证jQuery方式jQuery插件——Valida">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo-next-Algolia">
-<meta property="og:url" content="https://zcsmile.coding.me/notes/2018/10/15/hexo-next-Algolia/index.html">
+<meta property="og:title" content="web开发中的表单处理">
+<meta property="og:url" content="https://zcsmile.coding.me/notes/2018/10/16/web开发中的表单处理/index.html">
 <meta property="og:site_name" content="charles Zhou&#39;s Notes">
-<meta property="og:description" content="algolia docsearch支持全文搜索，不过没有中文资料所以暂时放弃。 需要安装的插件  hexo-algolia hexo-browsersync hexo-deployer-git  转交给next基金会后的最新地址github algolia设置 把主题的配置文件放到站点的配置文件里方便管理 作者自己写的文档wiki http://theme-next.iissnan.com/ he">
+<meta property="og:description" content="表单的内容表单提交的属性 action–规定当提交表单时向何处发送表单数据，action为空（默认）向当前页面发送。 method–规定如何发送表单数据，有get和post两种方法。  表单的提交方式： ajax 浏览器表单提交（会重新加载页面）   表单提交后用303重定向响应浏览器重定向到哪里？ 专用的成功/失败页面 原位置 新位置   表单验证jQuery方式jQuery插件——Valida">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-15T09:03:58.552Z">
+<meta property="og:updated_time" content="2018-10-16T07:02:31.203Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo-next-Algolia">
-<meta name="twitter:description" content="algolia docsearch支持全文搜索，不过没有中文资料所以暂时放弃。 需要安装的插件  hexo-algolia hexo-browsersync hexo-deployer-git  转交给next基金会后的最新地址github algolia设置 把主题的配置文件放到站点的配置文件里方便管理 作者自己写的文档wiki http://theme-next.iissnan.com/ he">
+<meta name="twitter:title" content="web开发中的表单处理">
+<meta name="twitter:description" content="表单的内容表单提交的属性 action–规定当提交表单时向何处发送表单数据，action为空（默认）向当前页面发送。 method–规定如何发送表单数据，有get和post两种方法。  表单的提交方式： ajax 浏览器表单提交（会重新加载页面）   表单提交后用303重定向响应浏览器重定向到哪里？ 专用的成功/失败页面 原位置 新位置   表单验证jQuery方式jQuery插件——Valida">
 
 
 
 
 
 
-  <link rel="canonical" href="https://zcsmile.coding.me/notes/2018/10/15/hexo-next-Algolia/"/>
+  <link rel="canonical" href="https://zcsmile.coding.me/notes/2018/10/16/web开发中的表单处理/"/>
 
 
 
@@ -135,7 +135,7 @@
   };
 </script>
 
-  <title>hexo-next-Algolia | charles Zhou's Notes</title>
+  <title>web开发中的表单处理 | charles Zhou's Notes</title>
   
 
 
@@ -339,7 +339,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zcsmile.coding.me/notes/notes/2018/10/15/hexo-next-Algolia/">
+    <link itemprop="mainEntityOfPage" href="https://zcsmile.coding.me/notes/notes/2018/10/16/web开发中的表单处理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="charles zhou">
@@ -356,7 +356,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">hexo-next-Algolia
+          <h1 class="post-title" itemprop="name headline">web开发中的表单处理
               
             
           </h1>
@@ -381,7 +381,7 @@
                 
               
 
-              <time title="创建时间：2018-10-15 16:57:22 / 修改时间：17:03:58" itemprop="dateCreated datePublished" datetime="2018-10-15T16:57:22+08:00">2018-10-15</time>
+              <time title="创建时间：2018-10-16 15:02:03 / 修改时间：15:02:31" itemprop="dateCreated datePublished" datetime="2018-10-16T15:02:03+08:00">2018-10-16</time>
             
 
             
@@ -391,6 +391,24 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/notes/categories/开发者手册/" itemprop="url" rel="index"><span itemprop="name">开发者手册</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -419,19 +437,22 @@
       
 
       
-        <p>algolia docsearch支持全文搜索，不过没有中文资料所以暂时放弃。</p>
-<p>需要安装的插件</p>
-<ol>
-<li>hexo-algolia</li>
-<li>hexo-browsersync</li>
-<li>hexo-deployer-git</li>
+        <h2 id="表单的内容"><a href="#表单的内容" class="headerlink" title="表单的内容"></a>表单的内容</h2><h3 id="表单提交的属性"><a href="#表单提交的属性" class="headerlink" title="表单提交的属性"></a>表单提交的属性</h3><ol>
+<li>action–规定当提交表单时向何处发送表单数据，action为空（默认）向当前页面发送。</li>
+<li>method–规定如何发送表单数据，有get和post两种方法。</li>
 </ol>
-<h4 id="转交给next基金会后的最新地址"><a href="#转交给next基金会后的最新地址" class="headerlink" title="转交给next基金会后的最新地址"></a>转交给next基金会后的最新地址</h4><p><a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">github</a></p>
-<p><a href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/ALGOLIA-SEARCH.md" target="_blank" rel="noopener">algolia设置</a></p>
-<p><a href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/DATA-FILES.md" target="_blank" rel="noopener">把主题的配置文件放到站点的配置文件里方便管理</a></p>
-<h4 id="作者自己写的文档"><a href="#作者自己写的文档" class="headerlink" title="作者自己写的文档"></a>作者自己写的文档</h4><p><a href="https://github.com/iissnan/hexo-theme-next/wiki" target="_blank" rel="noopener">wiki</a></p>
-<p><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">http://theme-next.iissnan.com/</a></p>
-<h4 id="hexo官方网站"><a href="#hexo官方网站" class="headerlink" title="hexo官方网站"></a>hexo官方网站</h4><p><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">https://hexo.io/zh-cn/</a></p>
+<h3 id="表单的提交方式："><a href="#表单的提交方式：" class="headerlink" title="表单的提交方式："></a>表单的提交方式：</h3><ol>
+<li>ajax</li>
+<li>浏览器表单提交（会重新加载页面）</li>
+</ol>
+<hr>
+<h2 id="表单提交后用303重定向响应浏览器"><a href="#表单提交后用303重定向响应浏览器" class="headerlink" title="表单提交后用303重定向响应浏览器"></a>表单提交后用303重定向响应浏览器</h2><h3 id="重定向到哪里？"><a href="#重定向到哪里？" class="headerlink" title="重定向到哪里？"></a>重定向到哪里？</h3><ol>
+<li>专用的成功/失败页面</li>
+<li>原位置</li>
+<li>新位置</li>
+</ol>
+<hr>
+<h2 id="表单验证"><a href="#表单验证" class="headerlink" title="表单验证"></a>表单验证</h2><h3 id="jQuery方式"><a href="#jQuery方式" class="headerlink" title="jQuery方式"></a>jQuery方式</h3><p>jQuery插件——Validation Plugin<br><br><a href="https://jqueryvalidation.org/" target="_blank" rel="noopener">官方网站</a><br><br><a href="http://www.cnblogs.com/hejunrex/archive/2011/11/17/2252193.html" target="_blank" rel="noopener">jQuery验证控件jquery.validate.js使用说明+中文API</a><br><br><a href="https://github.com/jquery-validation/jquery-validation" target="_blank" rel="noopener">github地址</a><br><br><a href="http://www.imooc.com/learn/385" target="_blank" rel="noopener">慕客网视频教程</a></p>
 
       
     </div>
@@ -459,8 +480,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/notes/2018/10/15/支持全文搜索/" rel="next" title="支持全文搜索">
-                <i class="fa fa-chevron-left"></i> 支持全文搜索
+              <a href="/notes/2018/10/16/RESTful-API设计最佳实践/" rel="next" title="RESTful API 设计最佳实践">
+                <i class="fa fa-chevron-left"></i> RESTful API 设计最佳实践
               </a>
             
           </div>
@@ -468,6 +489,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/notes/2018/10/16/handlebars/" rel="prev" title="handlebars">
+                handlebars <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -537,14 +562,64 @@
                 
                   <a href="/notes/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">23</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
               
 
               
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/notes/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
 
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/notes/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
             </nav>
           
@@ -577,7 +652,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#转交给next基金会后的最新地址"><span class="nav-number">1.</span> <span class="nav-text">转交给next基金会后的最新地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#作者自己写的文档"><span class="nav-number">2.</span> <span class="nav-text">作者自己写的文档</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#hexo官方网站"><span class="nav-number">3.</span> <span class="nav-text">hexo官方网站</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#表单的内容"><span class="nav-number">1.</span> <span class="nav-text">表单的内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#表单提交的属性"><span class="nav-number">1.1.</span> <span class="nav-text">表单提交的属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表单的提交方式："><span class="nav-number">1.2.</span> <span class="nav-text">表单的提交方式：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表单提交后用303重定向响应浏览器"><span class="nav-number">2.</span> <span class="nav-text">表单提交后用303重定向响应浏览器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#重定向到哪里？"><span class="nav-number">2.1.</span> <span class="nav-text">重定向到哪里？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表单验证"><span class="nav-number">3.</span> <span class="nav-text">表单验证</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery方式"><span class="nav-number">3.1.</span> <span class="nav-text">jQuery方式</span></a></li></ol></li></ol></div>
             
 
           </div>

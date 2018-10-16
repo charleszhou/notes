@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/notes/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/notes/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/notes/images/apple-touch-icon-next.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/notes/images/favicon-32x32-next.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/notes/images/favicon-16x16-next.png?v=6.4.2">
+
+
+  <link rel="mask-icon" href="/notes/images/logo.svg?v=6.4.2" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/notes/',
+    scheme: 'Pisces',
+    version: '6.4.2',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: 'FW6LPFGHIU',
+      apiKey: 'c9e0a0fdd1e421f8ecf1f7ec4611ae90',
+      indexName: 'notes',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="全栈工程师培训材料https://github.com/ruanyf/jstraining Growth: 全栈增长工程师指南http://growth.ren/ React 入门实例教程http://www.ruanyifeng.com/blog/2015/03/react.html 技术胖-胜洪宇关注WEB前端技术(vuejs,webpack等免费教程)http://jspang.com/ E">
+<meta name="keywords" content="nodejs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nodejs待学习内容">
+<meta property="og:url" content="https://zcsmile.coding.me/notes/2018/10/16/nodejs待学习内容/index.html">
+<meta property="og:site_name" content="charles Zhou&#39;s Notes">
+<meta property="og:description" content="全栈工程师培训材料https://github.com/ruanyf/jstraining Growth: 全栈增长工程师指南http://growth.ren/ React 入门实例教程http://www.ruanyifeng.com/blog/2015/03/react.html 技术胖-胜洪宇关注WEB前端技术(vuejs,webpack等免费教程)http://jspang.com/ E">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-10-16T06:28:23.656Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="nodejs待学习内容">
+<meta name="twitter:description" content="全栈工程师培训材料https://github.com/ruanyf/jstraining Growth: 全栈增长工程师指南http://growth.ren/ React 入门实例教程http://www.ruanyifeng.com/blog/2015/03/react.html 技术胖-胜洪宇关注WEB前端技术(vuejs,webpack等免费教程)http://jspang.com/ E">
+
+
+
+
+
+
+  <link rel="canonical" href="https://zcsmile.coding.me/notes/2018/10/16/nodejs待学习内容/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>nodejs待学习内容 | charles Zhou's Notes</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/notes/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">charles Zhou's Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/notes/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/notes/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/notes/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/notes/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/notes/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zcsmile.coding.me/notes/notes/2018/10/16/nodejs待学习内容/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="charles zhou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/notes/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="charles Zhou's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">nodejs待学习内容
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-16 14:27:48 / 修改时间：14:28:23" itemprop="dateCreated datePublished" datetime="2018-10-16T14:27:48+08:00">2018-10-16</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>全栈工程师培训材料<br><a href="https://github.com/ruanyf/jstraining" target="_blank" rel="noopener">https://github.com/ruanyf/jstraining</a></p>
+<p>Growth: 全栈增长工程师指南<br><a href="http://growth.ren/" target="_blank" rel="noopener">http://growth.ren/</a></p>
+<p>React 入门实例教程<br><a href="http://www.ruanyifeng.com/blog/2015/03/react.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2015/03/react.html</a></p>
+<p>技术胖-胜洪宇关注WEB前端技术(vuejs,webpack等免费教程)<br><a href="http://jspang.com/" target="_blank" rel="noopener">http://jspang.com/</a></p>
+<p>ECMAScript 6 入门<br><a href="http://es6.ruanyifeng.com/" target="_blank" rel="noopener">http://es6.ruanyifeng.com/</a></p>
+<p>《Node.js 包教不包会》 by alsotang<br><a href="https://github.com/alsotang/node-lessons" target="_blank" rel="noopener">https://github.com/alsotang/node-lessons</a></p>
+<p>《一起学 Node.js》彻底重写完毕<br><a href="https://cnodejs.org/topic/581b0c4ebb9452c9052e7acb" target="_blank" rel="noopener">https://cnodejs.org/topic/581b0c4ebb9452c9052e7acb</a><br><a href="https://github.com/nswbmw/N-blog" target="_blank" rel="noopener">https://github.com/nswbmw/N-blog</a></p>
+<h2 id="模板引擎"><a href="#模板引擎" class="headerlink" title="模板引擎"></a>模板引擎</h2><h3 id="handlebars"><a href="#handlebars" class="headerlink" title="handlebars"></a>handlebars</h3><p>handlebars一个js模板引擎<br><br><a href="http://www.ghostchina.com/introducing-the-handlebars-js-templating-engine/" target="_blank" rel="noopener">http://www.ghostchina.com/introducing-the-handlebars-js-templating-engine/</a><br><br><a href="https://segmentfault.com/a/1190000000342636" target="_blank" rel="noopener">https://segmentfault.com/a/1190000000342636</a><br><br><a href="http://www.imooc.com/learn/859" target="_blank" rel="noopener">http://www.imooc.com/learn/859</a><br><br><a href="https://cnodejs.org/topic/56a2e8b1cd415452622eed2d" target="_blank" rel="noopener">https://cnodejs.org/topic/56a2e8b1cd415452622eed2d</a><br><br><a href="http://www.cnblogs.com/iyangyuan/archive/2013/12/12/3471227.html" target="_blank" rel="noopener">http://www.cnblogs.com/iyangyuan/archive/2013/12/12/3471227.html</a><br><br><a href="http://www.imooc.com/article/6983" target="_blank" rel="noopener">http://www.imooc.com/article/6983</a><br><br><a href="http://www.imooc.com/article/6923" target="_blank" rel="noopener">http://www.imooc.com/article/6923</a><br><br>中文文档<br><br><a href="http://keenwon.com/992.html" target="_blank" rel="noopener">http://keenwon.com/992.html</a><br><br><a href="http://handlebarsjs.com/" target="_blank" rel="noopener">http://handlebarsjs.com/</a><br></p>
+<p>使用Handlebars模块化你的页面<br><br><a href="https://cnodejs.org/topic/56a834c07ec020ed4b96b3ab" target="_blank" rel="noopener">https://cnodejs.org/topic/56a834c07ec020ed4b96b3ab</a></p>
+<h3 id="swig"><a href="#swig" class="headerlink" title="swig"></a>swig</h3><p>hexo的next主题使用</p>
+<h3 id="EJS"><a href="#EJS" class="headerlink" title="EJS"></a>EJS</h3><p>hexo的landscape主题使用</p>
+<h3 id="用hexo搭建博客记录"><a href="#用hexo搭建博客记录" class="headerlink" title="用hexo搭建博客记录"></a>用hexo搭建博客记录</h3><p>找到的一个系列文章<br><a href="http://www.cnblogs.com/chengxs/p/7496236.html" target="_blank" rel="noopener">http://www.cnblogs.com/chengxs/p/7496236.html</a></p>
+<hr>
+<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><h3 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h3><p>Node-MySQL 官方文档<br><br><a href="https://www.oschina.net/translate/node-mysql-tutorial" target="_blank" rel="noopener">https://www.oschina.net/translate/node-mysql-tutorial</a></p>
+<p>Node-MySQL：如何在node.js里连接和使用mysql<br><br><a href="http://www.techug.com/post/node-mysql-node-js.html" target="_blank" rel="noopener">http://www.techug.com/post/node-mysql-node-js.html</a></p>
+<p>MySQL驱动<br><br><a href="https://github.com/mysqljs/mysql" target="_blank" rel="noopener">https://github.com/mysqljs/mysql</a></p>
+<h3 id="mongodb"><a href="#mongodb" class="headerlink" title="mongodb"></a>mongodb<br></h3><p><a href="http://www.imooc.com/learn/295" target="_blank" rel="noopener">http://www.imooc.com/learn/295</a></p>
+<h2 id="orm框架"><a href="#orm框架" class="headerlink" title="orm框架"></a>orm框架</h2><h3 id="Sequelize"><a href="#Sequelize" class="headerlink" title="Sequelize"></a>Sequelize</h3><p>需要es2016语言特性</p>
+<p>Sequelize 中文API文档<br><a href="https://itbilu.com/nodejs/npm/VkYIaRPz-.html#api-init" target="_blank" rel="noopener">https://itbilu.com/nodejs/npm/VkYIaRPz-.html#api-init</a></p>
+<hr>
+<h2 id="web框架"><a href="#web框架" class="headerlink" title="web框架"></a>web框架</h2><h3 id="koa"><a href="#koa" class="headerlink" title="koa"></a>koa</h3><p>需要es2016语言特性</p>
+<p>StuQ Koa在线课程<br><a href="http://i5ting.github.io/stuq-koa/index.html" target="_blank" rel="noopener">http://i5ting.github.io/stuq-koa/index.html</a></p>
+<hr>
+<h2 id="web构建工具"><a href="#web构建工具" class="headerlink" title="web构建工具"></a>web构建工具</h2><h3 id="Gulp"><a href="#Gulp" class="headerlink" title="Gulp"></a>Gulp</h3><p>gulp 入门指南 <a href="https://github.com/nimojs/gulp-book" target="_blank" rel="noopener">https://github.com/nimojs/gulp-book</a></p>
+<h3 id="Webpack"><a href="#Webpack" class="headerlink" title="Webpack"></a>Webpack</h3><p>webpack 入门指南 <a href="https://github.com/nimojs/webpack-book" target="_blank" rel="noopener">https://github.com/nimojs/webpack-book</a><br></p>
+<p>流行的前端模块化工具webpack初探 <a href="http://www.cnblogs.com/penghuwan/p/6665140.html" target="_blank" rel="noopener">http://www.cnblogs.com/penghuwan/p/6665140.html</a></p>
+<p>深入浅出webpack教程系列<br><a href="http://www.cnblogs.com/ghostwu/p/7499237.html" target="_blank" rel="noopener">http://www.cnblogs.com/ghostwu/p/7499237.html</a></p>
+<p>理解 Gulp 和 Webpack<br><br><a href="http://www.barretlee.com/blog/2017/04/27/gulp-and-webpack/" target="_blank" rel="noopener">http://www.barretlee.com/blog/2017/04/27/gulp-and-webpack/</a></p>
+<p>gulp &amp; webpack整合，鱼与熊掌我都要！<br><br><a href="http://www.jianshu.com/p/9724c47b406c" target="_blank" rel="noopener">http://www.jianshu.com/p/9724c47b406c</a></p>
+<hr>
+<h2 id="web前端框架"><a href="#web前端框架" class="headerlink" title="web前端框架"></a>web前端框架</h2><h3 id="React"><a href="#React" class="headerlink" title="React"></a>React</h3><p>React 入门实例教程<br><br><a href="http://www.ruanyifeng.com/blog/2015/03/react.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2015/03/react.html</a></p>
+<p>React 技术栈系列教程<br><br><a href="http://www.ruanyifeng.com/blog/2016/09/react-technology-stack.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2016/09/react-technology-stack.html</a></p>
+<p><a href="https://react.bootcss.com/" target="_blank" rel="noopener">https://react.bootcss.com/</a></p>
+<hr>
+<h2 id="桌面程序"><a href="#桌面程序" class="headerlink" title="桌面程序"></a>桌面程序</h2><h3 id="electron"><a href="#electron" class="headerlink" title="electron"></a>electron</h3><p>electron + vue 实践项目<br><br><a href="http://www.imooc.com/article/20266?block_id=tuijian_wz" target="_blank" rel="noopener">http://www.imooc.com/article/20266?block_id=tuijian_wz</a></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/notes/tags/nodejs/" rel="tag"># nodejs</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/notes/2018/10/16/node-js配置备忘/" rel="next" title="node.js配置备忘">
+                <i class="fa fa-chevron-left"></i> node.js配置备忘
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/notes/2018/10/16/nodejs-mysql开发学习/" rel="prev" title="nodejs+mysql开发学习">
+                nodejs+mysql开发学习 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">charles zhou</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/notes/archives/">
+                
+                    <span class="site-state-item-count">23</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/notes/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/notes/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#模板引擎"><span class="nav-number">1.</span> <span class="nav-text">模板引擎</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#handlebars"><span class="nav-number">1.1.</span> <span class="nav-text">handlebars</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#swig"><span class="nav-number">1.2.</span> <span class="nav-text">swig</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#EJS"><span class="nav-number">1.3.</span> <span class="nav-text">EJS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用hexo搭建博客记录"><span class="nav-number">1.4.</span> <span class="nav-text">用hexo搭建博客记录</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库"><span class="nav-number">2.</span> <span class="nav-text">数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mysql"><span class="nav-number">2.1.</span> <span class="nav-text">mysql</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mongodb"><span class="nav-number">2.2.</span> <span class="nav-text">mongodb</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orm框架"><span class="nav-number">3.</span> <span class="nav-text">orm框架</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Sequelize"><span class="nav-number">3.1.</span> <span class="nav-text">Sequelize</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web框架"><span class="nav-number">4.</span> <span class="nav-text">web框架</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#koa"><span class="nav-number">4.1.</span> <span class="nav-text">koa</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web构建工具"><span class="nav-number">5.</span> <span class="nav-text">web构建工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Gulp"><span class="nav-number">5.1.</span> <span class="nav-text">Gulp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Webpack"><span class="nav-number">5.2.</span> <span class="nav-text">Webpack</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web前端框架"><span class="nav-number">6.</span> <span class="nav-text">web前端框架</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#React"><span class="nav-number">6.1.</span> <span class="nav-text">React</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#桌面程序"><span class="nav-number">7.</span> <span class="nav-text">桌面程序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#electron"><span class="nav-number">7.1.</span> <span class="nav-text">electron</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">charles zhou</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Pisces</a> v6.4.2</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/notes/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/notes/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/notes/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/notes/js/src/utils.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/notes/js/src/motion.js?v=6.4.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/notes/js/src/affix.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/notes/js/src/schemes/pisces.js?v=6.4.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/notes/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/notes/js/src/post-details.js?v=6.4.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/notes/js/src/bootstrap.js?v=6.4.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/notes/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/notes/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/notes/js/src/algolia-search.js?v=6.4.2"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
